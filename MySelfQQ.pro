@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-01-29T11:23:26
+# Project created by QtCreator 2019-02-01T17:22:16
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = qt_demo
+TARGET = MySelfQQ
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,15 +26,21 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        widget.cpp \
+    dialoglist.cpp
 
 HEADERS += \
-        mainwindow.h
+        widget.h \
+    dialoglist.h
 
 FORMS += \
-        mainwindow.ui
+        widget.ui \
+    dialoglist.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
